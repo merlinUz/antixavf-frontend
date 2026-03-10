@@ -13,6 +13,7 @@ import {
 } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import img1 from './assets/logo.svg'
+import PrivacyPolicy from './PrivacyPolicy'
 
 export default function App() {
 	const [platform, setPlatform] = useState(null)
@@ -176,6 +177,9 @@ export default function App() {
 		setYtVerificationUrl('')
 		setYtDeviceCode('')
 		setIsPolling(false)
+	}
+	if (window.location.pathname === '/privacy-policy') {
+		return <PrivacyPolicy />
 	}
 
 	return (
@@ -534,19 +538,24 @@ export default function App() {
 			</div>
 
 			{/* Footer / Maxfiylik eslatmasi */}
-			<div className='mt-12 text-center max-w-md relative z-10'>
-				<div className='inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-slate-800/50 border border-slate-700/50 backdrop-blur-sm mb-4'>
-					<ShieldCheck className='w-4 h-4 text-emerald-500' />
-					<span className='text-xs text-slate-300 font-medium'>
-						In-Memory Security
-					</span>
-				</div>
-				<p className='text-slate-500 text-xs leading-relaxed'>
-					Antixavf.uz hech qanday shaxsiy ma'lumotlarni yoki parollarni
-					saqlamaydi. <br /> Tekshiruv tugashi bilan barcha ma'lumotlar
-					serverdan butunlay o'chiriladi.
-				</p>
-			</div>
-		</div>
-	)
+      <div className='mt-12 text-center max-w-md relative z-10'>
+        <div className='inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-slate-800/50 border border-slate-700/50 backdrop-blur-sm mb-4'>
+          <ShieldCheck className='w-4 h-4 text-emerald-500' />
+          <span className='text-xs text-slate-300 font-medium'>
+            In-Memory Security
+          </span>
+        </div>
+        <p className='text-slate-500 text-xs leading-relaxed'>
+          Antixavf.uz hech qanday shaxsiy ma'lumotlarni yoki parollarni
+          saqlamaydi. <br /> Tekshiruv tugashi bilan barcha ma'lumotlar
+          serverdan butunlay o'chiriladi.
+        </p>
+        
+        {/* 👇 MANA SHU QATORNI QO'SHAMIZ (Google shuni ko'radi) */}
+        <a href="/privacy-policy" className="text-blue-400 hover:text-blue-300 text-xs mt-3 inline-block underline transition-colors">
+          Maxfiylik Siyosati (Privacy Policy)
+        </a>
+      </div>
+    </div>
+  )
 }
