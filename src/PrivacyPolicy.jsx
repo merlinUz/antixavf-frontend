@@ -18,30 +18,59 @@ const PrivacyPolicy = () => {
               <ShieldCheck className='w-8 h-8 text-emerald-400' />
             </div>
             <div>
-              <h1 className='text-2xl md:text-3xl font-bold text-white'>Maxfiylik Siyosati</h1>
-              <p className='text-slate-400 mt-1'>Oxirgi yangilanish: 2026-yil 10-mart</p>
+              <h1 className='text-2xl md:text-3xl font-bold text-white'>Maxfiylik Siyosati (Privacy Policy)</h1>
+              <p className='text-slate-400 mt-1'>Oxirgi yangilanish: 2026-yil 14-mart</p>
             </div>
           </div>
           
           <div className='space-y-6'>
             <div>
-              <h2 className='text-xl font-semibold text-emerald-400 mb-2'>1. Ma'lumotlarni yig'ish</h2>
-              <p className='text-slate-300 leading-relaxed'>
-                Antixavf platformasi tizimga kirishingiz uchun faqatgina ochiq ma'lumotlarni qabul qiladi. Biz hech qanday shaxsiy parolingizni so'ramaymiz va o'z bazamizda saqlamaymiz.
+              <h2 className='text-xl font-semibold text-emerald-400 mb-2'>1. Ma'lumotlarga kirish (Data Accessed)</h2>
+              <p className='text-slate-300 leading-relaxed mb-2'>
+                Dasturimiz sizning YouTube obunalaringizni ko'rish uchun <code className="bg-slate-700/50 px-2 py-1 rounded text-emerald-300">youtube.readonly</code> ruxsatini so'raydi. Biz faqatgina siz obuna bo'lgan ochiq kanallar ro'yxatini ko'ramiz.
+              </p>
+              <p className='text-slate-400 text-sm italic'>
+                (Our application requests access to your YouTube subscriptions using the youtube.readonly scope. We only access the list of channels you are subscribed to.)
               </p>
             </div>
 
             <div>
-              <h2 className='text-xl font-semibold text-emerald-400 mb-2'>2. Ma'lumotlardan foydalanish</h2>
-              <p className='text-slate-300 leading-relaxed'>
-                Sizning ma'lumotlaringiz faqatgina akkauntingizni taqiqlangan manbalardan himoya qilish (audit) va xizmatlarimizdan xavfsiz foydalanishingizni ta'minlash uchun ishlatiladi.
+              <h2 className='text-xl font-semibold text-emerald-400 mb-2'>2. Ma'lumotlardan foydalanish (Data Usage)</h2>
+              <p className='text-slate-300 leading-relaxed mb-2'>
+                Sizning ma'lumotlaringiz faqatgina real vaqt rejimida akkauntingizni taqiqlangan manbalardan himoya qilish (audit) uchun ishlatiladi. Biz bu orqali faqat ekranda tekshiruv natijasini ko'rsatamiz.
+              </p>
+              <p className='text-slate-400 text-sm italic'>
+                (We use this data strictly in real-time to scan your subscriptions against a public database of prohibited or dangerous channels. We only use this to show you the audit result on your screen.)
               </p>
             </div>
 
             <div>
-              <h2 className='text-xl font-semibold text-emerald-400 mb-2'>3. Uchinchi shaxslarga berish</h2>
-              <p className='text-slate-300 leading-relaxed'>
-                Biz sizning shaxsiy ma'lumotlaringizni hech qanday holatda uchinchi shaxslarga sotmaymiz yoki ulashmaymiz. Tekshiruv tugashi bilan kiritilgan vaqtinchalik kodlar darhol o'chiriladi.
+              <h2 className='text-xl font-semibold text-emerald-400 mb-2'>3. Ma'lumotlarni ulashish (Data Sharing)</h2>
+              <p className='text-slate-300 leading-relaxed mb-2'>
+                Biz sizning shaxsiy ma'lumotlaringizni hech qanday holatda uchinchi shaxslarga bermaymiz, sotmaymiz yoki ulashmaymiz.
+              </p>
+              <p className='text-slate-400 text-sm italic'>
+                (We do NOT share, sell, or transfer your Google user data to any third parties.)
+              </p>
+            </div>
+
+            <div>
+              <h2 className='text-xl font-semibold text-emerald-400 mb-2'>4. Saqlash va Himoyalash (Data Storage & Protection)</h2>
+              <p className='text-slate-300 leading-relaxed mb-2'>
+                Biz YouTube ma'lumotlaringizni serverlarimizda saqlamaymiz. Tekshiruv jarayoni vaqtinchalik xotirada amalga oshadi va natija chiqqach, barcha ma'lumotlar tizimdan darhol o'chirib yuboriladi.
+              </p>
+              <p className='text-slate-400 text-sm italic'>
+                (We do NOT store your YouTube data. The scanning process is done purely in temporary memory. Once the scan is complete and the result is displayed, your data is immediately completely discarded from our system.)
+              </p>
+            </div>
+
+            <div>
+              <h2 className='text-xl font-semibold text-emerald-400 mb-2'>5. Saqlash muddati va O'chirish (Data Retention & Deletion)</h2>
+              <p className='text-slate-300 leading-relaxed mb-2'>
+                Ma'lumotlar bizda saqlanmagani uchun, ularni ushlab turish yoki o'chirish muddati yo'q. Siz istalgan vaqtda Google Akkaunt sozlamalari orqali dasturimizga berilgan ruxsatni bekor qilishingiz mumkin.
+              </p>
+              <p className='text-slate-400 text-sm italic'>
+                (Since we do not store any of your personal data on our servers, there is no data to retain or delete. You can revoke our application's access at any time directly from your Google Account settings.)
               </p>
             </div>
           </div>
